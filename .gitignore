@@ -6,3 +6,7 @@ config.json
 *.h
 *.ino
 *.c
+
+# don't include build directories
+dist/
+build/
