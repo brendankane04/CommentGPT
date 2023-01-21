@@ -10,15 +10,15 @@ You'll never have to write comments again!
 ```bash
 git clone https://github.com/brendankane04/CommentGPT.git
 ```
-#### Download the package with pip
+#### Download the packages with pip
 ```bash
-pip3 install CommentGPT==0.1
+pip3 install -r requirements.txt
 ```
 ### Installation of ChatGPT-wrapper
 This module needed by the script must be installed in its own way. You will need to run these commands.
 ```bash
 pip install git+https://github.com/mmabrouk/chatgpt-wrapper
-pip3 install playwright
+pip install playwright
 playwright install firefox
 ```
 After running this command, you will reach a web page run by OpenAI. 
