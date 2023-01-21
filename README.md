@@ -18,6 +18,7 @@ pip3 install CommentGPT==0.1
 This module needed by the script must be installed in its own way. You will need to run these commands.
 ```bash
 pip install git+https://github.com/mmabrouk/chatgpt-wrapper
+pip3 install playwright
 playwright install firefox
 ```
 After running this command, you will reach a web page run by OpenAI. 
