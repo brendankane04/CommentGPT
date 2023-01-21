@@ -1,0 +1,12 @@
+# don't include the config file
+config.json
+
+# don't include files which were commented
+*.cpp
+*.h
+*.ino
+*.c
+
+# don't include build directories
+dist/
+build/
