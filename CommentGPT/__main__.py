@@ -1,6 +1,5 @@
 import os, sys, getopt
 from CommentGPT import commenter as c
-from CommentGPT import filter as filt
 
 
 section_size = 50  # How many lines compose each chunk of code sent to ChatGPT

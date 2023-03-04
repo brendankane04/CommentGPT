@@ -1,5 +1,6 @@
 from CommentGPT import chatgpt_interface_wrapper
 from tqdm import tqdm
+from CommentGPT import filter as filt
 
 testing_mode = False
 
@@ -50,7 +51,10 @@ def comment_code(snippet, section_size=50):
         # combine each individual commented section into a combined, commented file
         combined_response = response if combined_response == "" else combined_response + '\n' + response
 
-    return combined_response
+    # ensure none of the existing code was removed or modified and that all the new lines of code are comments
+    filtered_combined_response = filt.get_new_lines(snippet, combined_response)
+
+    return filtered_combined_response
 
 
 # verify if ChatGPT is working by asking a very simple question
