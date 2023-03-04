@@ -1,5 +1,6 @@
 import os, sys, getopt
 from CommentGPT import commenter as c
+from CommentGPT import filter as filt
 
 
 section_size = 50  # How many lines compose each chunk of code sent to ChatGPT
@@ -59,6 +60,9 @@ if __name__=="__main__":
     # Actually comment the code & return the commented code
     combined_response = c.comment_code(snippet, section_size)
 
+    # filter the results so that lines of actual code are known not to be modified
+    filtered_combined_response = filt.get_new_lines(snippet, combined_response)
+
     # write the commented code to an output file
     with open(outputfile, 'w') as file:
-        file.write(combined_response)
+        file.write(filtered_combined_response)

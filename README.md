@@ -33,7 +33,7 @@ Afterwards, exit the webpage.
 The python script can be called from the terminal and used with the following script
 Clone the script using git, then access the file `main.py`.
 ```bash
-python3 main.py -i test_file.cpp -o test_file_commented.cpp
+python3 __main__.py -i test_file.cpp -o test_file_commented.cpp
 ```
 The script will comment the file
 #### python package
